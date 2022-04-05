@@ -1,7 +1,7 @@
 #include <time.h>
 #include <stdlib.h>
 
-float ReadDataFromSensor()
+float SimulateReadDataFromSensor()
 {
   srand(time(0));
   float data = (rand() % (int)(100)) ;
@@ -9,4 +9,4 @@ float ReadDataFromSensor()
 }
 
 
-float (*funp_ReadDataFromSensor)() = ReadDataFromSensor;
+float (*funp_ReadDataFromSensor)() = SimulateReadDataFromSensor;
