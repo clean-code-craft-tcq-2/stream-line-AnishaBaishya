@@ -1,16 +1,12 @@
 #include <time.h>
 #include <stdlib.h>
 
-float ReadDataFromSensor(float parameter_Maximum, float parameter_Minimum)
+float ReadDataFromSensor()
 {
   srand(time(0));
-  float data = (rand() % (int)(parameter_Maximum+1)) ;
-  if(data < parameter_Minimum)
-  {
-    data = data + parameter_Minimum;
-  }
+  float data = (rand() % (int)(100)) ;
   return data;
 }
 
 
-float (*funp_ReadDataFromSensor)(float,float) = ReadDataFromSensor;
+float (*funp_ReadDataFromSensor)() = ReadDataFromSensor;
