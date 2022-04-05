@@ -3,10 +3,18 @@
 #include "test/catch.hpp"
 #include <time.h>
 #include <stdlib.h>
+#include "BMS_Sender.h"
 
 srand(time(0));
-#include "test_BMSData_Sender.h"
-#include "BMS_Sender.h"
+float SimulateReadDataFromSensor(float minimumThreshold,float maximumThreshold)
+{
+  float data = (rand() % (int)(maximumThreshold - minimumThreshold +1)) + minimumThreshold ;
+  return data;
+}
+
+
+float (*funp_ReadDataFromSensor)(float,float) = SimulateReadDataFromSensor;
+
 
 TEST_CASE("Test 1 : Prepare Data from Sensor") {
 
