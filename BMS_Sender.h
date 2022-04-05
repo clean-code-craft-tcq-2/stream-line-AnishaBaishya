@@ -1,6 +1,5 @@
 #include <string>
-
-int SenderData();
+int SenderData(BatteryParameterInfo parameterInfo ,Sender DataFromSender, float (*funp_ReadDataFromSensor)(float,float))
 
 
 
