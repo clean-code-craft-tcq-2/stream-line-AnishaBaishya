@@ -1,10 +1,13 @@
+#include <stdio.h>
+#include <string.h>
+
 #include "BMS_Sender.h"
 
 
 int SenderData(BatteryParameterInfo *parameterInfo ,Sender *DataFromSender, float (*funp_ReadDataFromSensor)(float,float)) {
   int index;
   int inner_index;
-  for(index=0; index<DataFromSender.number_of_values; index++)
+  for(index=0; index<DataFromSender->number_of_values; index++)
   {
     for(inner_index=0; inner_index<NoOfParameter; inner_index++)
     {
@@ -20,21 +23,21 @@ void formatSensorData(BatteryParameterInfo *parameterInfo ,Sender *DataFromSende
 {
   int index;
   int inner_index;
-  for(index=0;index<DataFromSender.number_of_values;index++)
+  for(index=0;index<DataFromSender->number_of_values;index++)
   {
     for(inner_index=0; inner_index<NoOfParameter-1; inner_index++)
     {
-      DataFromSender.formatted_senderdata[index] = to_string(parameterInfo[inner_index].parameterdata[index]) + ",";
+      DataFromSender->formatted_senderdata[index] = to_string(parameterInfo[inner_index].parameterdata[index]) + ",";
     }
-    DataFromSender.formatted_senderdata[index] = DataFromSender.formatted_senderdata[index] + to_string(parameterInfo[NoOfParameter-1].parameterdata[index]);
+    DataFromSender->formatted_senderdata[index] = DataFromSender->formatted_senderdata[index] + to_string(parameterInfo[NoOfParameter-1].parameterdata[index]);
   }
 }
 
 void printonConsole(Sender *DataFromSender)
 {
   int index;
-  for(int index=0;index<DataFromSender.number_of_values;index++)
+  for(int index=0;index<DataFromSender->number_of_values;index++)
   {
-    printf ("%s",DataFromSender.formatted_senderdata[index]);
+    printf ("%s",DataFromSender->formatted_senderdata[index]);
   }
 }
