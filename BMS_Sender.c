@@ -30,7 +30,7 @@ void formatSensorData(BatteryParameterInfo *parameterInfo ,Sender *DataFromSende
     for(inner_index=0; inner_index<NoOfParameter-1; inner_index++)
     {
       gcvt(parameterInfo[inner_index].parameterdata[index], 6, buf);
-      DataFromSender->formatted_senderdata[index] = buf +(char)",";
+      DataFromSender->formatted_senderdata[index] = buf +char(",");
     }
     gcvt(parameterInfo[NoOfParameter-1].parameterdata[index], 6, buf);
     DataFromSender->formatted_senderdata[index] = DataFromSender->formatted_senderdata[index] + buf;
