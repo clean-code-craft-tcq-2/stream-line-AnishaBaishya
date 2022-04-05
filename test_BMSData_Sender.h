@@ -9,7 +9,6 @@ float GenerateRandomSensorValue(float minimumThreshold,float maximumThreshold)
 
 float SimulateReadDataFromSensor(float minimumThreshold,float maximumThreshold)
 {
-  srand(time(0));
   float data = GenerateRandomSensorValue(minimumThreshold,maximumThreshold);
   return data;
 }
