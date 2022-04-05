@@ -2,6 +2,8 @@
 
 #include "test/catch.hpp"
 #include <time.h>
+#include <stdlib.h>
+
 srand(time(0));
 #include "test_BMSData_Sender.h"
 #include "BMS_Sender.h"
