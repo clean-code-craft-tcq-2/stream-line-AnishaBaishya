@@ -1,4 +1,5 @@
-
+#include <time.h>
+#include <stdlib.h>
 
 float ReadDataFromSensor(float parameter_Maximum, float parameter_Minimum)
 {
