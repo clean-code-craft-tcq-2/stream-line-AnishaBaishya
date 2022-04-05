@@ -16,5 +16,5 @@ TEST_CASE("Test 1 : Prepare Data from Sensor") {
   parameterInfo[1].maximumThreshold = 80.0;
   
   DataFromSender.number_of_values = 10;
-  REQUIRE(SenderData(parameterInfo ,&DataFromSender,funp_ReadDataFromSensor) == 1);
+  REQUIRE(SenderData(parameterInfo ,&DataFromSender,funp_ReadDataFromSensor) == TRUE);
 }
