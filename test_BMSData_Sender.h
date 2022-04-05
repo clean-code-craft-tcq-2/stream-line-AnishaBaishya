@@ -4,11 +4,7 @@
 float SimulateReadDataFromSensor(float minimumThreshold,float maximumThreshold)
 {
   srand(time(0));
-  float data = (rand() % (int)(maximumThreshold+1)) ;
-  if(data < minimumThreshold)
-  {
-    data = data + minimumThreshold;
-  }
+  float data = (rand() % (int)(maximumThreshold - minimumThreshold +1)) + minimumThreshold ;
   return data;
 }
 
