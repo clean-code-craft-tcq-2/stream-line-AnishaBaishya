@@ -1,5 +1,3 @@
-#include <stdlib.h>
-  
 float SimulateReadDataFromSensor(float minimumThreshold,float maximumThreshold)
 {
   float data = (rand() % (int)(maximumThreshold - minimumThreshold +1)) + minimumThreshold ;
