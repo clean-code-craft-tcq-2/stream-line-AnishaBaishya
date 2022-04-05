@@ -22,5 +22,5 @@ typedef struct {
 
 typedef struct  {
   int number_of_values;
-  string formatted_senderdata[50];
+  char formatted_senderdata[50];
 } Sender;
