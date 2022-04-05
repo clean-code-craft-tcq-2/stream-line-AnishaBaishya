@@ -24,13 +24,13 @@ void formatSensorData(BatteryParameterInfo *parameterInfo ,Sender *DataFromSende
 {
   int index;
   int inner_index;
-  char buf[100];
+  char buf[20];
   for(index=0;index<DataFromSender->number_of_values;index++)
   {
     for(inner_index=0; inner_index<NoOfParameter-1; inner_index++)
     {
       gcvt(parameterInfo[inner_index].parameterdata[index], 6, buf);
-      DataFromSender->formatted_senderdata[index] = buf + ",";
+      DataFromSender->formatted_senderdata[index] = buf +(char)",";
     }
     gcvt(parameterInfo[NoOfParameter-1].parameterdata[index], 6, buf);
     DataFromSender->formatted_senderdata[index] = DataFromSender->formatted_senderdata[index] + buf;
