@@ -8,7 +8,7 @@ int SenderData(BatteryParameterInfo *parameterInfo ,Sender DataFromSender, float
   {
     for(inner_index=0; inner_index<NoOfParameter; inner_index++)
     {
-      //parameterInfo[inner_index].parameterdata[index] = funp_ReadDataFromSensor(parameterInfo[inner_index].maximumThreshold, parameterInfo[inner_index].minimumThreshold);
+      parameterInfo[inner_index].parameterdata[index] = funp_ReadDataFromSensor();
     }
   }
   return 1;
