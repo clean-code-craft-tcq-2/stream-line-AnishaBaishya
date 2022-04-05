@@ -8,6 +8,8 @@ typedef enum {
 
 typedef struct {
   EV_BatteryParameterTypesForBMS parameter;
+  float minimumThreshold;
+  float maximumThreshold;
   float parameterdata[50];
 } BatteryParameterInfo;
 
@@ -16,4 +18,4 @@ typedef struct  {
   char formatted_senderdata[50];
 } Sender;
 
-int SenderData(BatteryParameterInfo *parameterInfo ,Sender DataFromSender, float (*funp_ReadDataFromSensor)());
+int SenderData(BatteryParameterInfo *parameterInfo ,Sender DataFromSender, float (*funp_ReadDataFromSensor)(float,float));
