@@ -48,7 +48,7 @@ TEST_CASE("Test 2 : Prepare Data from Sensor : Invalid Data") {
   parameterInfo1[1].minimumThreshold = 20.0;
   parameterInfo1[1].maximumThreshold = 80.0;
   
-  DataFromSender1.number_of_values = 50;
+  DataFromSender1.number_of_values = 10;
   float (*funp_ReadDataFromSensor)(float,float) = SimulateReadDataFromSensorInvalid;
   
   REQUIRE(SenderData(parameterInfo1 ,&DataFromSender1,funp_ReadDataFromSensor) == FALSE);
