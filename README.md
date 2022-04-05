@@ -76,5 +76,5 @@ This section lists the minimum functionality of the Sender and Receiver.
 
 Setup the quality parameters of your project (duplication, complexity, coverage, warnings) using GitHub workflow yml files.
 
-
+## Design
 ![Design_BMS_Sender](https://user-images.githubusercontent.com/90901197/161767235-7185dcff-73cf-422f-a3bc-851c19854be6.png)
