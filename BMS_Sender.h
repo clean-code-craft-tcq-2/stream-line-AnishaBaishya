@@ -21,4 +21,4 @@ typedef struct  {
 
 
 
-int SenderData(BatteryParameterInfo parameterInfo ,Sender DataFromSender, float (*funp_ReadDataFromSensor)(float,float))
+int SenderData(BatteryParameterInfo parameterInfo ,Sender DataFromSender, float (*funp_ReadDataFromSensor)(float,float));
