@@ -14,7 +14,8 @@ bool SenderData(BatteryParameterInfo *parameterInfo ,Sender *DataFromSender, flo
         isDataReadFromSensor = FALSE;
     }
   }
-  DisplaySensorDataOnConsole(parameterInfo ,DataFromSender);
+  if(isDataReadFromSensor == TRUE)
+    DisplaySensorDataOnConsole(parameterInfo ,DataFromSender);
   return isDataReadFromSensor;
 }
 
