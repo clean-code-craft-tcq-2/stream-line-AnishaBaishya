@@ -1,7 +1,3 @@
-#include <string>
-int SenderData(BatteryParameterInfo parameterInfo ,Sender DataFromSender, float (*funp_ReadDataFromSensor)(float,float))
-
-
 
 typedef enum {
   TempParameter,
@@ -22,3 +18,7 @@ typedef struct  {
   int number_of_values;
   char formatted_senderdata[50];
 } Sender;
+
+
+
+int SenderData(BatteryParameterInfo parameterInfo ,Sender DataFromSender, float (*funp_ReadDataFromSensor)(float,float))
