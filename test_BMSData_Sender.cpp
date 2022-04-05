@@ -7,7 +7,7 @@
 TEST_CASE("Test 1 : Prepare Data from Sensor") {
 
   BatteryParameterInfo parameterInfo [NoOfParameter] ;
-  Sender SenderData ;
-  SenderData.number_of_values = 5;
-  REQUIRE(SenderData(parameterInfo ,SenderData,funp_ReadDataFromSensor) == 1);
+  Sender DataFromSender ;
+  DataFromSender.number_of_values = 5;
+  REQUIRE(SenderData(parameterInfo ,DataFromSender,funp_ReadDataFromSensor) == 1);
 }
