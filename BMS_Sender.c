@@ -1,7 +1,7 @@
 #include "BMS_Sender.h"
 
 
-int SenderData(BatteryParameterInfo *parameterInfo ,Sender DataFromSender, float (*funp_ReadDataFromSensor)(float,float)) {
+int SenderData(BatteryParameterInfo *parameterInfo ,Sender *DataFromSender, float (*funp_ReadDataFromSensor)(float,float)) {
   int index;
   int inner_index;
   for(index=0; index<DataFromSender.number_of_values; index++)
@@ -11,5 +11,30 @@ int SenderData(BatteryParameterInfo *parameterInfo ,Sender DataFromSender, float
       parameterInfo[inner_index].parameterdata[index] = funp_ReadDataFromSensor(parameterInfo[inner_index].minimumThreshold,parameterInfo[inner_index].maximumThreshold);
     }
   }
+  formatSensorData(parameterInfo ,DataFromSender);
+  printonConsole(DataFromSender)
   return 1;
+}
+
+void formatSensorData(BatteryParameterInfo *parameterInfo ,Sender *DataFromSender)
+{
+  int index;
+  int inner_index;
+  for(index=0;index<DataFromSender.number_of_values;index++)
+  {
+    for(inner_index=0; inner_index<NoOfParameter-1; inner_index++)
+    {
+      DataFromSender.formatted_senderdata[index] = to_string(parameterInfo[inner_index].parameterdata[index]) + ",";
+    }
+    DataFromSender.formatted_senderdata[index] = DataFromSender.formatted_senderdata[index] + to_string(parameterInfo[NoOfParameter-1].parameterdata[index]);
+  }
+}
+
+void printonConsole(Sender *DataFromSender)
+{
+  int index;
+  for(int index=0;index<DataFromSender.number_of_values;index++)
+  {
+    printf ("%s",DataFromSender.formatted_senderdata[index]);
+  }
 }
