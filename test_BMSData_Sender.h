@@ -13,4 +13,4 @@ float SimulateReadDataFromSensor(float minimumThreshold,float maximumThreshold)
 }
 
 
-float (*funp_ReadDataFromSensor)() = SimulateReadDataFromSensor;
+float (*funp_ReadDataFromSensor)(float,float) = SimulateReadDataFromSensor;
