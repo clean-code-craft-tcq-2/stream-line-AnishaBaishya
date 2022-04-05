@@ -1,5 +1,6 @@
 #include "test_BMSData_Sender.h"
 #include "BMS_Sender.h"
+#include <time.h>
 #include <stdlib.h>
 #include <string>
 
