@@ -1,6 +1,5 @@
 #include "test_BMSData_Sender.h"
 #include "BMS_Sender.h"
-#include <string>
 
 
 int SenderData(BatteryParameterInfo parameterInfo ,float (*funp_ReadDataFromSensor)(float,float)) {
