@@ -14,6 +14,7 @@ typedef struct {
   EV_BatteryParameterTypesForBMS parameter;
   float minimumThreshold;
   float maximumThreshold;
+  float parameterdata[50];
   char parameterName[100];
 } BatteryParameterInfo;
 
