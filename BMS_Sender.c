@@ -1,7 +1,7 @@
 #include "BMS_Sender.h"
 
 
-int SenderData(BatteryParameterInfo parameterInfo ,Sender DataFromSender, float (*funp_ReadDataFromSensor)()) {
+int SenderData(BatteryParameterInfo *parameterInfo ,Sender DataFromSender, float (*funp_ReadDataFromSensor)()) {
   int index;
   int inner_index;
   for(index=0; index<DataFromSender.number_of_values; index++)
