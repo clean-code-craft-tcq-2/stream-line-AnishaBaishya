@@ -15,7 +15,7 @@ int SenderData(BatteryParameterInfo *parameterInfo ,Sender *DataFromSender, floa
     }
   }
   formatSensorData(parameterInfo ,DataFromSender);
-  printonConsole(DataFromSender)
+  printonConsole(DataFromSender);
   return 1;
 }
 
@@ -27,9 +27,9 @@ void formatSensorData(BatteryParameterInfo *parameterInfo ,Sender *DataFromSende
   {
     for(inner_index=0; inner_index<NoOfParameter-1; inner_index++)
     {
-      DataFromSender->formatted_senderdata[index] = to_string(parameterInfo[inner_index].parameterdata[index]) + ",";
+      DataFromSender->formatted_senderdata[index] = (parameterInfo[inner_index].parameterdata[index]) + ",";
     }
-    DataFromSender->formatted_senderdata[index] = DataFromSender->formatted_senderdata[index] + to_string(parameterInfo[NoOfParameter-1].parameterdata[index]);
+    DataFromSender->formatted_senderdata[index] = DataFromSender->formatted_senderdata[index] + (parameterInfo[NoOfParameter-1].parameterdata[index]);
   }
 }
 
