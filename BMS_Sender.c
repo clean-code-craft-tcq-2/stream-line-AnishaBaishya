@@ -23,7 +23,6 @@ void DisplaySensorDataOnConsole(BatteryParameterInfo *parameterInfo ,Sender *Dat
 {
   int index;
   int inner_index;
-  char buf[20];
   for(index=0;index<DataFromSender->number_of_values;index++)
   {
     for(inner_index=0; inner_index<NoOfParameter-1; inner_index++)
@@ -32,5 +31,4 @@ void DisplaySensorDataOnConsole(BatteryParameterInfo *parameterInfo ,Sender *Dat
     }
     printf("%f \n",parameterInfo[NoOfParameter-1].parameterdata[index]);
   }
-}
 }
