@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <time.h>
   
 float SimulateReadDataFromSensor(float minimumThreshold,float maximumThreshold)
 {
