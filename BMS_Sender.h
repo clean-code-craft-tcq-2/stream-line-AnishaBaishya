@@ -16,3 +16,4 @@ typedef struct  {
   char formatted_senderdata[50];
 } Sender;
 
+int SenderData(BatteryParameterInfo *parameterInfo ,Sender DataFromSender, float (*funp_ReadDataFromSensor)());
