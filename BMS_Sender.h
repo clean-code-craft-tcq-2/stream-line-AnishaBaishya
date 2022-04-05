@@ -19,5 +19,4 @@ typedef struct  {
 } Sender;
 
 int SenderData(BatteryParameterInfo *parameterInfo ,Sender *DataFromSender, float (*funp_ReadDataFromSensor)(float,float));
-void formatSensorData(BatteryParameterInfo *parameterInfo ,Sender *DataFromSender);
-void printonConsole(Sender *DataFromSender);
+void DisplaySensorDataOnConsole(BatteryParameterInfo *parameterInfo ,Sender *DataFromSender);
