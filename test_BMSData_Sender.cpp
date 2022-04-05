@@ -5,5 +5,7 @@
 
 TEST_CASE("Test 1 : Prepare Data from Sensor") {
 
-  REQUIRE(SenderData() == 1);
+  BatteryParameterInfo parameterInfo [NoOfParameter] ;
+  Sender SenderData ;
+  REQUIRE(SenderData(BatteryParameterInfo parameterInfo ,Sender SenderData, float (*funp_ReadDataFromSensor)(float,float)) == 1);
 }
