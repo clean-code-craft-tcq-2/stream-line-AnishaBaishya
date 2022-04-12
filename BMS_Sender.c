@@ -38,6 +38,5 @@ void DisplaySensorDataOnConsole(BatteryParameterInfo *parameterInfo ,Sender *Dat
       PrintOnConsole(parameterInfo,index,inner_index);
     }
     PrintOnConsole(parameterInfo,index,(NoOfParameter-1));
-    ConsoleLineBreak();
   }
 }
