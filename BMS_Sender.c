@@ -19,12 +19,12 @@ bool ProcessSenderData(BatteryParameterInfo *parameterInfo ,Sender *DataFromSend
   return isDataReadFromSensor;
 }
 
-void PrintOnConsole(BatteryParameterInfo *parameterInfo, int index, int inner_index)
+void PrintOnConsole(BatteryParameterInfo *parameterInfo, int loopindex, int loopinner_index)
 {
-  if(inner_index == (NoOfParameter-1))
-    printf("%f \n",parameterInfo[inner_index].parameterdata[index]);
+  if(loopinner_index == (NoOfParameter-1))
+    printf("%f \n",parameterInfo[loopinner_index].parameterdata[loopindex]);
   else
-    printf("%f ,",parameterInfo[inner_index].parameterdata[index]);
+    printf("%f ,",parameterInfo[loopinner_index].parameterdata[loopindex]);
 }
 
 void DisplaySensorDataOnConsole(BatteryParameterInfo *parameterInfo ,Sender *DataFromSender)
