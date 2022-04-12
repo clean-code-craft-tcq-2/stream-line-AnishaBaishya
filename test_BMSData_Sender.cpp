@@ -24,12 +24,12 @@ float SimulateReadDataFromSensorInvalid(float minimumThreshold,float maximumThre
 
 float SimulateReadDataFromSensor_ManualData(float minimumThreshold,float maximumThreshold)
 {
-  float data;
+  float Data;
   if(minimumThreshold == 5.0)
-    data = 10.0;
+    Data = 10.0;
   if(minimumThreshold == 10.0)
-    data = 35.0;
-  return data;
+    Data = 35.0;
+  return Data;
 }
   
 TEST_CASE("Test 1 : Prepare Data from Sensor : Valid Data") {
