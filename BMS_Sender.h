@@ -26,4 +26,5 @@ typedef struct  {
 
 
 bool ProcessSenderData(BatteryParameterInfo *parameterInfo ,Sender *DataFromSender, float (*funp_ReadDataFromSensor)(float,float));
+void PrintOnConsole(BatteryParameterInfo *parameterInfo, int index, int inner_index);
 void DisplaySensorDataOnConsole(BatteryParameterInfo *parameterInfo ,Sender *DataFromSender);
