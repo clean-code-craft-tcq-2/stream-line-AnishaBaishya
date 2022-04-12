@@ -8,12 +8,12 @@
 
 float SimulateReadDataFromSensor(float minimumThreshold,float maximumThreshold)
 {
-  float data = (rand() % (int)(maximumThreshold+1)) ;
-  if(data < minimumThreshold)
+  float Data = (rand() % (int)(maximumThreshold+1)) ;
+  if(Data < minimumThreshold)
   {
-    data = data + minimumThreshold;
+    Data = Data + minimumThreshold;
   }
-  return data;
+  return Data;
 }
 
 float SimulateReadDataFromSensorInvalid(float minimumThreshold,float maximumThreshold)
