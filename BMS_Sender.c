@@ -24,6 +24,10 @@ void PrintOnConsole(BatteryParameterInfo *parameterInfo, int index, int inner_in
     printf("%f ,",parameterInfo[inner_index].parameterdata[index]);
 }
 
+void ConsoleLineBreak()
+{
+  printf("\n"); 
+}
 void DisplaySensorDataOnConsole(BatteryParameterInfo *parameterInfo ,Sender *DataFromSender)
 {
   int index;
@@ -35,5 +39,6 @@ void DisplaySensorDataOnConsole(BatteryParameterInfo *parameterInfo ,Sender *Dat
       PrintOnConsole(parameterInfo,index,inner_index);
     }
     PrintOnConsole(parameterInfo,index,(NoOfParameter-1));
+    ConsoleLineBreak();
   }
 }
