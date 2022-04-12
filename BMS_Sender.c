@@ -19,6 +19,11 @@ bool ProcessSenderData(BatteryParameterInfo *parameterInfo ,Sender *DataFromSend
   return isDataReadFromSensor;
 }
 
+void PrintOnConsole(BatteryParameterInfo *parameterInfo, int index, int inner_index)
+{
+    printf("%f ,",parameterInfo[inner_index].parameterdata[index]);
+}
+
 void DisplaySensorDataOnConsole(BatteryParameterInfo *parameterInfo ,Sender *DataFromSender)
 {
   int index;
@@ -27,8 +32,8 @@ void DisplaySensorDataOnConsole(BatteryParameterInfo *parameterInfo ,Sender *Dat
   {
     for(inner_index=0; inner_index<NoOfParameter-1; inner_index++)
     {
-      printf("%f ,",parameterInfo[inner_index].parameterdata[index]);
+      PrintOnConsole(parameterInfo,index,inner_index);
     }
-    printf("%f \n",parameterInfo[NoOfParameter-1].parameterdata[index]);
+    PrintOnConsole(parameterInfo,index,(NoOfParameter-1));
   }
 }
