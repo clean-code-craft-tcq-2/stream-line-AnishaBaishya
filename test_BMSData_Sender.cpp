@@ -24,6 +24,7 @@ float SimulateReadDataFromSensorInvalid(float minimumThreshold,float maximumThre
 
 float SimulateReadDataFromSensor_ManualData(float minimumThreshold,float maximumThreshold)
 {
+  float data;
   if(minimumThreshold == 5.0)
     data = 10.0;
   if(minimumThreshold == 10.0)
