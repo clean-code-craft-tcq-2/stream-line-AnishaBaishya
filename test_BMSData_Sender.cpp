@@ -22,6 +22,15 @@ float SimulateReadDataFromSensorInvalid(float minimumThreshold,float maximumThre
   return data;
 }
 
+float SimulateReadDataFromSensor_ManualData(float minimumThreshold,float maximumThreshold)
+{
+  if(minimumThreshold == 5.0)
+    data = 10.0;
+  if(minimumThreshold == 10.0)
+    data = 35.0;
+  return data
+}
+  
 TEST_CASE("Test 1 : Prepare Data from Sensor : Valid Data") {
 
   BatteryParameterInfo parameterInfo [NoOfParameter] ;
@@ -56,4 +65,21 @@ TEST_CASE("Test 2 : Prepare Data from Sensor : Invalid Data") {
   float (*funp_ReadDataFromSensor)(float,float) = SimulateReadDataFromSensorInvalid;
   
   REQUIRE(ProcessSenderData(parameterInfo1 ,&DataFromSender1,funp_ReadDataFromSensor) == FALSE);
+}
+
+TEST_CASE("Test 3 : Prepare Data from Sensor : Manual Data") {
+
+  BatteryParameterInfo parameterInfo [NoOfParameter] ;
+  Sender DataFromSender ;
+  
+  parameterInfo[0].minimumThreshold = 5.0;
+  parameterInfo[0].maximumThreshold = 20.0;
+  
+  parameterInfo[1].minimumThreshold = 10.0;
+  parameterInfo[1].maximumThreshold = 50.0;
+  
+  DataFromSender.number_of_values = 2;
+  float (*funp_ReadDataFromSensor)(float,float) = SimulateReadDataFromSensor_ManualData;
+  
+  REQUIRE(ProcessSenderData(parameterInfo ,&DataFromSender,funp_ReadDataFromSensor) == TRUE);
 }
