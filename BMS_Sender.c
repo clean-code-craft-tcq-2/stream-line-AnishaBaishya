@@ -1,7 +1,7 @@
 #include "BMS_Sender.h"
 
 
-bool SenderData(BatteryParameterInfo *parameterInfo ,Sender *DataFromSender, float (*funp_ReadDataFromSensor)(float,float)) {
+bool ProcessSenderData(BatteryParameterInfo *parameterInfo ,Sender *DataFromSender, float (*funp_ReadDataFromSensor)(float,float)) {
   int index;
   int inner_index;
   bool isDataReadFromSensor = TRUE;
