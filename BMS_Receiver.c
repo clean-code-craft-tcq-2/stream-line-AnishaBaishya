@@ -11,7 +11,7 @@ void ReceiveDataFromConsole(BatteryParameterInfo *parameterInfo)
   {
     for(inner_index=0; inner_index<NoOfParameter-1; inner_index++)
     {
-	      scanf("%f ,",parameterInfo[index].parameterdata[inner_index]);
+       scanf("%f ,",parameterInfo[index].parameterdata[inner_index]);
     }
     scanf("%f \n",parameterInfo[index].parameterdata[inner_index]);
   }
@@ -19,6 +19,6 @@ void ReceiveDataFromConsole(BatteryParameterInfo *parameterInfo)
 
 void BMSReceiver(BatteryParameterInfo *parameterInfo)
 {
-  GetSensorDataFromConsole(Temperature,SOC,ChargeRate);
+
   ReceiveDataFromConsole(BatteryParameterInfo *parameterInfo);
 }
