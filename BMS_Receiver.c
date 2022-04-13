@@ -20,5 +20,5 @@ void ReceiveDataFromConsole(BatteryParameterInfo *parameterInfo)
 void BMSReceiver(BatteryParameterInfo *parameterInfo)
 {
 
-  ReceiveDataFromConsole(BatteryParameterInfo *parameterInfo);
+  ReceiveDataFromConsole(&parameterInfo);
 }
