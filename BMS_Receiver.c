@@ -2,7 +2,7 @@
 #include "BMS_Receiver.h"
 #include "BMS_Sender.h"
 
-void ReceiveDataFromConsole(BatteryParameterInfo *parameterInfo)
+void ReceiveDataFromConsole(ReceiverBatteryParameterInfo  *parameterInfo)
 {
  
   int index;
@@ -17,7 +17,7 @@ void ReceiveDataFromConsole(BatteryParameterInfo *parameterInfo)
   }
 }
 
-void BMSReceiver(BatteryParameterInfo *parameterInfo)
+void BMSReceiver(ReceiverBatteryParameterInfo  *parameterInfo)
 {
 
   ReceiveDataFromConsole(&parameterInfo);
