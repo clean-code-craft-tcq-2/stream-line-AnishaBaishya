@@ -43,7 +43,7 @@ TEST_CASE("Test 1 : Prepare Data from Sensor : Valid Data") {
   parameterInfo[1].minimumThreshold = 10.0;
   parameterInfo[1].maximumThreshold = 80.0;
   
-  DataFromSender.number_of_values = 50;
+  DataFromSender.number_of_values = 5;
   float (*funp_ReadDataFromSensor)(float,float) = SimulateReadDataFromSensor;
   
   srand(time(0));
