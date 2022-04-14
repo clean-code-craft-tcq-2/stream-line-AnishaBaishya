@@ -2,5 +2,9 @@
 
 #define Number_of_values 50 //DataFromSender->number_of_values
 
-void ReceiveDataFromConsole(BatteryParameterInfo *parameterInfo);
-void BMSReceiver(BatteryParameterInfo *parameterInfo);
+typedef struct {
+  float parameterdata[50];
+} ReceiverBatteryParameterInfo;
+
+void ReceiveDataFromConsole(ReceiverBatteryParameterInfo *parameterInfo);
+void BMSReceiver(ReceiverBatteryParameterInfo *parameterInfo);
