@@ -13,8 +13,10 @@ SCENARIO("As part of receiver, read the data sent by sender")
             int NumberOfParameters = 2;
             int NuberOfValues = 3;
             ReceiverBatteryParameterInfo ReceiverParameterInfo [NuberOfValues] = {0};
-            BatteryParameterInfo parameterInfo [NuberOfValues] = {0};
-            parameterInfo.parameterdata[NumberOfParameters] ={/*parameter1*/{22, 23, 24},
+            BatteryParameterInfo parameterInfo [NuberOfValues] ;
+           /* parameterInfo.parameterdata[NumberOfParameters] ={/*parameter1/{22, 23, 24},
+                                                              /*parameter2/{32, 33, 34}};*/
+                        parameterInfo ={/*parameter1*/{22, 23, 24},
                                                               /*parameter2*/{32, 33, 34}};
 
             THEN("Check weather data is read from console successfully")
