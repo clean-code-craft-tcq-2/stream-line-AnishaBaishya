@@ -15,7 +15,7 @@ SCENARIO("As part of receiver, read the data sent by sender")
 
             THEN("Check weather data is read from console successfully")
             {
-               ReceiveDataFromConsole(&ReceiverParameterInfo);
+               ReceiveDataFromConsole(ReceiverParameterInfo);
             }
         }
     }
