@@ -14,3 +14,6 @@ typedef enum
 
 StatusType ReceiveDataFromConsole(ReceiverBatteryParameterInfo *parameterInfo);
 void BMSReceiver(ReceiverBatteryParameterInfo *parameterInfo);
+
+float GetMaxValueOfIncomingStream(float *ParameterInfo);
+float GetMinValueofIncomingStream(float *ParameterInfo);
