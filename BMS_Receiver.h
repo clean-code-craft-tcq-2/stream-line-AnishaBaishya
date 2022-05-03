@@ -8,7 +8,7 @@ typedef enum
 	E_OK
 }StatusType;
 
-StatusType ReceiveDataFromConsole(float  *TemperatureData, float *SOCData, float *ChargeRateData)
+StatusType ReceiveDataFromConsole(float  *TemperatureData, float *SOCData, float *ChargeRateData);
 void BMSReceiver(float *ParameterData);
 
 float GetMaxValueOfIncomingStream(float *ParameterData);
