@@ -18,6 +18,20 @@ StatusType ReceiveDataFromConsole(ReceiverBatteryParameterInfo  *parameterInfo)
  return E_OK;
 }
 
+float GetMaxValueOfIncomingStream(float *ParameterInfo)
+{
+ float MaxValue = ParameterInfo[0];
+ 
+  return MaxValue;
+}
+
+float GetMinValueofIncomingStream(float *ParameterInfo)
+{
+  float MinValue = ParameterInfo[0];
+ 
+  return MinValue;
+}
+
 void BMSReceiver(ReceiverBatteryParameterInfo  *parameterInfo)
 {
 
