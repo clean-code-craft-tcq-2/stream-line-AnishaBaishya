@@ -25,9 +25,9 @@ SCENARIO("As part of receiver, read the data and process to get the statistics")
 {
     GIVEN(" Receiver data in CSV format")
      {
-        int NuberOfValues = 6; //INCOMING_STREAM_SIZE
+        int NuberOfValues = 10; //INCOMING_STREAM_SIZE
 
-        float ParameterData[NuberOfValues] = {5,2,6,4,3,1};
+        float ParameterData[NuberOfValues] = {5,2,6,4,3,1,1,2,3,4};
 
         THEN("Check whether data is to find min and max values")
         {
