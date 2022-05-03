@@ -6,5 +6,11 @@ typedef struct {
   float parameterdata[50];
 } ReceiverBatteryParameterInfo;
 
-void ReceiveDataFromConsole(ReceiverBatteryParameterInfo *parameterInfo);
+typedef enum
+{
+	E_NOT_OK,
+	E_OK
+}StatusType;
+
+StatusType ReceiveDataFromConsole(ReceiverBatteryParameterInfo *parameterInfo);
 void BMSReceiver(ReceiverBatteryParameterInfo *parameterInfo);
