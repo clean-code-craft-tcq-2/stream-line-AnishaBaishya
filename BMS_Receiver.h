@@ -1,6 +1,6 @@
 #pragma once
 
-#define INCOMING_STRAEM_SIZE 50 //DataFromSender->number_of_values
+#define INCOMING_STRAEM_SIZE 10 //DataFromSender->number_of_values
 
 typedef enum
 {
