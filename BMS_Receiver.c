@@ -2,38 +2,40 @@
 #include "BMS_Receiver.h"
 #include "BMS_Sender.h"
 
-StatusType ReceiveDataFromConsole(ReceiverBatteryParameterInfo  *parameterInfo)
+StatusType ReceiveDataFromConsole(float  *TemperatureData, float *SOC_Data, float *ChargeRateData)
 {
  
   int index;
-  int inner_index;
-  for(index=0;index<Number_of_values;index++)
+  for(index = 0; index < INCOMING_STRAEM_SIZE; index++)
   {
-    for(inner_index=0; inner_index<NoOfParameter-1; inner_index++)
-    {
-       scanf("%f",&parameterInfo[index].parameterdata[inner_index]);
-    }
-    scanf("%f",&parameterInfo[index].parameterdata[inner_index]);
+    scanf("%f ,%f ,%f",&TemperatureData[index],&SOC_Data[index],&ChargeRateData[index]);
   }
  return E_OK;
 }
 
-float GetMaxValueOfIncomingStream(float *ParameterInfo)
+float GetMaxValueOfIncomingStream(float *ParameterData)
 {
- float MaxValue = ParameterInfo[0];
- 
+ float MaxValue = ParameterData[0]; 
+ int Index;
+    for(Index = 0; Index < INCOMING_STRAEM_SIZE; Index++)
+   {
+     if(ParameterData[Index] > MaxValue)
+     {
+       MaxValue = ParameterData[Index];
+     }
+   }
   return MaxValue;
 }
 
-float GetMinValueofIncomingStream(float *ParameterInfo)
+float GetMinValueofIncomingStream(float *ParameterData)
 {
-  float MinValue = ParameterInfo[0];
+  float MinValue = ParameterData[0];
  
   return MinValue;
 }
 
-void BMSReceiver(ReceiverBatteryParameterInfo  *parameterInfo)
+void BMSReceiver(float  *ParameterData)
 {
 
-  ReceiveDataFromConsole(parameterInfo);
+  //ReceiveDataFromConsole(ParameterData);
 }
