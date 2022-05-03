@@ -36,6 +36,5 @@ float GetMinValueofIncomingStream(float *ParameterData)
 
 void BMSReceiver(float  *ParameterData)
 {
-
-  //ReceiveDataFromConsole(ParameterData);
+  GetMaxValueOfIncomingStream(ParameterData);
 }
