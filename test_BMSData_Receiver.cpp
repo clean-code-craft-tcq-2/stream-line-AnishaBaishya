@@ -9,13 +9,11 @@ SCENARIO("As part of receiver, read the data sent by sender")
     {
         WHEN(" Format of console and receiver are same")
         {
-
             int NuberOfValues = 3;
-            ReceiverBatteryParameterInfo ReceiverParameterInfo [NuberOfValues];
+            ReceiverBatteryParameterInfo ReceiverParameterInfo [NuberOfValues] = {0};
 
             THEN("Check weather data is read from console successfully")
             {
-               
                 REQUIRE(ReceiveDataFromConsole(ReceiverParameterInfo) == E_OK);
             }
         }
