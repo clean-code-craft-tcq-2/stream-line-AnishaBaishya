@@ -2,7 +2,7 @@
 #include "BMS_Receiver.h"
 #include "BMS_Sender.h"
 
-void ReceiveDataFromConsole(ReceiverBatteryParameterInfo  *parameterInfo)
+StatusType ReceiveDataFromConsole(ReceiverBatteryParameterInfo  *parameterInfo)
 {
  
   int index;
@@ -15,6 +15,7 @@ void ReceiveDataFromConsole(ReceiverBatteryParameterInfo  *parameterInfo)
     }
     scanf("%f",&parameterInfo[index].parameterdata[inner_index]);
   }
+ return E_OK;
 }
 
 void BMSReceiver(ReceiverBatteryParameterInfo  *parameterInfo)
