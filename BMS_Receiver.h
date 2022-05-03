@@ -1,10 +1,6 @@
 #pragma once
 
-#define Number_of_values 50 //DataFromSender->number_of_values
-
-typedef struct {
-  float parameterdata[50];
-} ReceiverBatteryParameterInfo;
+#define INCOMING_STRAEM_SIZE 50 //DataFromSender->number_of_values
 
 typedef enum
 {
@@ -12,8 +8,8 @@ typedef enum
 	E_OK
 }StatusType;
 
-StatusType ReceiveDataFromConsole(ReceiverBatteryParameterInfo *parameterInfo);
-void BMSReceiver(ReceiverBatteryParameterInfo *parameterInfo);
+StatusType ReceiveDataFromConsole(float  *TemperatureData, float *SOCData, float *ChargeRateData)
+void BMSReceiver(float *ParameterData);
 
-float GetMaxValueOfIncomingStream(float *ParameterInfo);
-float GetMinValueofIncomingStream(float *ParameterInfo);
+float GetMaxValueOfIncomingStream(float *ParameterData);
+float GetMinValueofIncomingStream(float *ParameterData);
