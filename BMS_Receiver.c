@@ -56,7 +56,18 @@ float GetSMAofIncomingStream(float *ParameterData, int WindowSize)
   return SMA;
 }
 
-void BMSReceiver(float  *ParameterData)
+void PrintReceiverDataOnConsole(float *ParameterData, float MaxValue, float MinValue, float SMA)
 {
-  GetMaxValueOfIncomingStream(ParameterData);
+  int Index = 0;
+printf("Data processed at Receiver\n");  
+  for(Index = 0; Index < INCOMING_STRAEM_SIZE; Index++)
+  {
+    printf("%f\n",ParameterData[Index]);
+  }
+  printf("Max value: %f, Min value: %f, SMA: %f\n",MaxValue,MinValue,SMA);
+}
+
+void BMSReceiver( float *ParameterData, float* TemperatureData, float* SOCData, float* ChargeRateData)
+{
+  PrintReceiverDataOnConsole(TemperatureData,  MaxValue,  MinValue,  SMA)
 }
