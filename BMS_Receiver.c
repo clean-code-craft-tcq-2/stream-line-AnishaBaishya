@@ -34,6 +34,15 @@ float GetMinValueofIncomingStream(float *ParameterData)
   return MinValue;
 }
 
+float GetSMAofIncomingStream(float *ParameterData, int WindowSize)
+{
+  float SMA = 0; //Simple Moving Average
+ int x;
+ x=WindowSize;
+ 
+  return SMA;
+}
+
 void BMSReceiver(float  *ParameterData)
 {
   GetMaxValueOfIncomingStream(ParameterData);
