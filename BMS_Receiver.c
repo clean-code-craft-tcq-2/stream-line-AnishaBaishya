@@ -69,7 +69,9 @@ printf("Data processed at Receiver\n");
 
 void BMSReceiver( float* TemperatureData, float* SOCData, float* ChargeRateData)
 {
- PrintReceiverDataOnConsole(TemperatureData,  MaxValue,  MinValue,  SMA);
- //PrintReceiverDataOnConsole(SOCData,  MaxValue,  MinValue,  SMA);
- //PrintReceiverDataOnConsole(ChargeRateData,  MaxValue,  MinValue,  SMA);
+int WindowSize = 5;
+ 
+ PrintReceiverDataOnConsole(TemperatureData,  GetMaxValueOfIncomingStream(TemperatureData),  GetMinValueofIncomingStream(TemperatureData),  GetSMAofIncomingStream(TemperatureData,WindowSize));
+ PrintReceiverDataOnConsole(SOCData,  GetMaxValueOfIncomingStream(SOCData),  GetMinValueofIncomingStream(SOCData),  GetSMAofIncomingStream(SOCData,WindowSize));
+ PrintReceiverDataOnConsole(ChargeRateData,  GetMaxValueOfIncomingStream(ChargeRateData),  GetMinValueofIncomingStream(ChargeRateData),  GetSMAofIncomingStream(ChargeRateData,WindowSize));
 }
