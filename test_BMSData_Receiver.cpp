@@ -32,7 +32,7 @@ SCENARIO("As part of receiver, read the data and process to get the statistics")
         THEN("Check whether data is to find min and max values")
         {
             REQUIRE(GetMaxValueOfIncomingStream(ParameterData) == 6.0f);
-            REQUIRE(GetMinValueOfIncomingStream(ParameterData) == 1.0f);
+            REQUIRE(GetMinValueofIncomingStream(ParameterData) == 1.0f);
             REQUIRE(GetSMAofIncomingStream(ParameterData, 5) == 6.0f);
         }
     }
