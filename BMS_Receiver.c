@@ -30,15 +30,28 @@ float GetMaxValueOfIncomingStream(float *ParameterData)
 float GetMinValueofIncomingStream(float *ParameterData)
 {
   float MinValue = ParameterData[0];
- 
+  int Index;
+     for(Index = 0; Index < INCOMING_STRAEM_SIZE; Index++)
+   {
+     if(ParameterData[Index] < MinValue)
+     {
+       MinValue = ParameterData[Index];
+     }
+   }
   return MinValue;
 }
 
 float GetSMAofIncomingStream(float *ParameterData, int WindowSize)
 {
   float SMA = 0; //Simple Moving Average
- int x;
- x=WindowSize;
+  float SumOfValuesInWindow = 0;
+  int Index;
+ 
+ for (Index = 0; Index < WindowSize; Index++)
+    {
+        SumOfValuesInWindow += ParameterData[INCOMING_STRAEM_SIZE-Index-1];
+    }
+  SMA = (SumOfValuesInWindow / (float)WindowSize);
  
   return SMA;
 }
