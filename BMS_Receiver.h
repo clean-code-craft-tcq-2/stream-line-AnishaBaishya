@@ -14,3 +14,4 @@ void BMSReceiver(float *ParameterData);
 float GetMaxValueOfIncomingStream(float *ParameterData);
 float GetMinValueofIncomingStream(float *ParameterData);
 float GetSMAofIncomingStream(float *ParameterData, int WindowSize);
+void PrintReceiverDataOnConsole(float *ParameterData, float MaxValue, float MinValue, float SMA);
