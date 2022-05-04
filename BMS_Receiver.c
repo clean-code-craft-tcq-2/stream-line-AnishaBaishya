@@ -69,5 +69,5 @@ printf("Data processed at Receiver\n");
 
 void BMSReceiver( float *ParameterData, float* TemperatureData, float* SOCData, float* ChargeRateData)
 {
-  PrintReceiverDataOnConsole(TemperatureData,  MaxValue,  MinValue,  SMA)
+  PrintReceiverDataOnConsole(TemperatureData,  MaxValue,  MinValue,  SMA);
 }
