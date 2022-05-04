@@ -9,7 +9,7 @@ typedef enum
 }StatusType;
 
 StatusType ReceiveDataFromConsole(float  *TemperatureData, float *SOCData, float *ChargeRateData);
-void BMSReceiver(float *ParameterData);
+void BMSReceiver(float *ParameterData, float* TemperatureData, float* SOCData, float* ChargeRateData);
 
 float GetMaxValueOfIncomingStream(float *ParameterData);
 float GetMinValueofIncomingStream(float *ParameterData);
