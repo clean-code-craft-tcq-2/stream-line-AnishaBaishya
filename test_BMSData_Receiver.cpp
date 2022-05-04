@@ -54,7 +54,7 @@ SCENARIO("Scene3: As part of receiver, read the data and process to get the stat
             REQUIRE(GetMinValueofIncomingStream(SOC) == 1.0f);
             REQUIRE(GetSMAofIncomingStream(ChargeRate, 5) == 2.2f);
             
-            BMSReceiver( float* Temperature, float* SOC, float* ChargeRate);
+            BMSReceiver(  Temperature,  SOC,  ChargeRate);
         }
     }
 }
