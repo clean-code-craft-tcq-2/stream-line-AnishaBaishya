@@ -33,7 +33,7 @@ SCENARIO("As part of receiver, read the data and process to get the statistics")
         {
             REQUIRE(GetMaxValueOfIncomingStream(ParameterData) == 6.0f);
             REQUIRE(GetMinValueofIncomingStream(ParameterData) == 1.0f);
-            REQUIRE(GetSMAofIncomingStream(ParameterData, 5) == 6.0f);
+            REQUIRE(GetSMAofIncomingStream(ParameterData, 5) == 2.2f);
         }
     }
 }
