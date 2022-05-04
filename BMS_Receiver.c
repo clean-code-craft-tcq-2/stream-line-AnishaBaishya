@@ -67,7 +67,9 @@ printf("Data processed at Receiver\n");
   printf("Max value: %f, Min value: %f, SMA: %f\n",MaxValue,MinValue,SMA);
 }
 
-void BMSReceiver( float *ParameterData, float* TemperatureData, float* SOCData, float* ChargeRateData)
+void BMSReceiver( float* TemperatureData, float* SOCData, float* ChargeRateData)
 {
-  PrintReceiverDataOnConsole(TemperatureData,  MaxValue,  MinValue,  SMA);
+ PrintReceiverDataOnConsole(TemperatureData,  MaxValue,  MinValue,  SMA);
+ //PrintReceiverDataOnConsole(SOCData,  MaxValue,  MinValue,  SMA);
+ //PrintReceiverDataOnConsole(ChargeRateData,  MaxValue,  MinValue,  SMA);
 }
